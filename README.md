@@ -1,5 +1,5 @@
 # RepoBIs
 A datawarehouse solution (?)
 
-Incluye hasta el momento
+Features:
 * Carga de productos
