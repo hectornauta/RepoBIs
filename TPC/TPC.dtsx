@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="TPC"
   DTS:PackageType="5"
-  DTS:VersionBuild="18"
-  DTS:VersionGUID="{A69BF362-A887-456F-92C9-8CA2F2EBC7B1}">
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{249ED0C4-A6A4-45FA-9D74-A1F870CC100B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -781,9 +781,21 @@ FROM            item</property>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
+          Size="167,42"
+          Id="Package\Cargar Productos\Insert de Producto"
+          TopLeft="259,413.5" />
+        <NodeLayout
+          Size="162,42"
+          Id="Package\Cargar Productos\Join de Productos"
+          TopLeft="261.5,209.5" />
+        <NodeLayout
+          Size="186,42"
+          Id="Package\Cargar Productos\Ordenar DimProductos"
+          TopLeft="249.5,107.5" />
+        <NodeLayout
           Size="178,42"
           Id="Package\Cargar Productos\Lectura de Productos"
-          TopLeft="5.49999999999997,5.5" />
+          TopLeft="5.5,5.5" />
         <NodeLayout
           Size="197,42"
           Id="Package\Cargar Productos\Lectura de DimProductos"
@@ -791,25 +803,71 @@ FROM            item</property>
         <NodeLayout
           Size="167,42"
           Id="Package\Cargar Productos\Ordenar Productos"
-          TopLeft="11,107.5" />
+          TopLeft="22,107.5" />
         <NodeLayout
-          Size="186,42"
-          Id="Package\Cargar Productos\Ordenar DimProductos"
-          TopLeft="249.5,107.5" />
+          Size="179,42"
+          Id="Package\Cargar Productos\Filtrado de Productos"
+          TopLeft="253,311.5" />
         <EdgeLayout
-          Id="Package\Cargar Productos.Paths[Salida de origen de ADO NET]"
-          TopLeft="94.5,47.5">
+          Id="Package\Cargar Productos.Paths[Sort Output1]"
+          TopLeft="342.5,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="25.6666666666666,60"
               Start="0,0"
-              End="0,52.5">
+              End="25.6666666666666,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,31.6479217603912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6479217603912"
+                    Point2="0,35.6479217603912"
+                    Point3="4,35.6479217603912" />
+                  <mssgle:LineSegment
+                    End="21.6666666666666,35.6479217603912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="21.6666666666666,35.6479217603912"
+                    Point2="25.6666666666666,35.6479217603912"
+                    Point3="25.6666666666666,39.6479217603912" />
+                  <mssgle:LineSegment
+                    End="25.6666666666666,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Productos.Paths[Sort Output]"
+          TopLeft="105.5,149.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="211.333333333333,60"
+              Start="0,0"
+              End="211.333333333333,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,31.6479217603912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,31.6479217603912"
+                    Point2="0,35.6479217603912"
+                    Point3="4,35.6479217603912" />
+                  <mssgle:LineSegment
+                    End="207.333333333333,35.6479217603912" />
+                  <mssgle:CubicBezierSegment
+                    Point1="207.333333333333,35.6479217603912"
+                    Point2="211.333333333333,35.6479217603912"
+                    Point3="211.333333333333,39.6479217603912" />
+                  <mssgle:LineSegment
+                    End="211.333333333333,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -840,36 +898,32 @@ FROM            item</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="162,42"
-          Id="Package\Cargar Productos\Join de Productos"
-          TopLeft="154,187" />
         <EdgeLayout
-          Id="Package\Cargar Productos.Paths[Sort Output]"
-          TopLeft="94.5,149.5">
+          Id="Package\Cargar Productos.Paths[Salida de origen de ADO NET]"
+          TopLeft="94.5,47.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="140.5,37.5"
+              EndConnector="11,60"
               Start="0,0"
-              End="140.5,30">
+              End="11,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,14.75" />
+                    End="0,26" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,14.75"
-                    Point2="0,18.75"
-                    Point3="4,18.75" />
+                    Point1="0,26"
+                    Point2="0,30"
+                    Point3="4,30" />
                   <mssgle:LineSegment
-                    End="136.5,18.75" />
+                    End="7,30" />
                   <mssgle:CubicBezierSegment
-                    Point1="136.5,18.75"
-                    Point2="140.5,18.75"
-                    Point3="140.5,22.75" />
+                    Point1="7,30"
+                    Point2="11,30"
+                    Point3="11,34" />
                   <mssgle:LineSegment
-                    End="140.5,30" />
+                    End="11,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -878,70 +932,20 @@ FROM            item</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\Cargar Productos.Paths[Sort Output1]"
-          TopLeft="342.5,149.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-81.8333333333334,37.5"
-              Start="0,0"
-              End="-81.8333333333334,30">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,18.2799511002445" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.2799511002445"
-                    Point2="0,22.2799511002445"
-                    Point3="-4,22.2799511002445" />
-                  <mssgle:LineSegment
-                    End="-77.8333333333334,22.2799511002445" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-77.8333333333334,22.2799511002445"
-                    Point2="-81.8333333333334,22.2799511002445"
-                    Point3="-81.8333333333334,26.2799511002445" />
-                  <mssgle:LineSegment
-                    End="-81.8333333333334,30" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="179,42"
-          Id="Package\Cargar Productos\Filtrado de Productos"
-          TopLeft="155,250" />
         <EdgeLayout
           Id="Package\Cargar Productos.Paths[Merge Join Output]"
-          TopLeft="154,208">
+          TopLeft="342.5,251.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="1,63"
+              EndConnector="0,60"
               Start="0,0"
-              End="-6.5,63">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="-18.5,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-18.5,0"
-                    Point2="-22.5,0"
-                    Point3="-22.5,4" />
-                  <mssgle:LineSegment
-                    End="-22.5,59" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-22.5,59"
-                    Point2="-22.5,63"
-                    Point3="-18.5,63" />
-                  <mssgle:LineSegment
-                    End="-6.5,63" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -950,49 +954,41 @@ FROM            item</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="167,42"
-          Id="Package\Cargar Productos\Insert de Producto"
-          TopLeft="474,239" />
         <EdgeLayout
           Id="Package\Cargar Productos.Paths[Mayúsculas y minúsculas 1]"
-          TopLeft="334,271">
+          TopLeft="342.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="140,-11"
+              EndConnector="0,60"
               Start="0,0"
-              End="132.5,-11">
+              End="0,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="66,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="66,0"
-                    Point2="70,0"
-                    Point3="70,-4" />
-                  <mssgle:LineSegment
-                    End="70,-7" />
-                  <mssgle:CubicBezierSegment
-                    Point1="70,-7"
-                    Point2="70,-11"
-                    Point3="74,-11" />
-                  <mssgle:LineSegment
-                    End="132.5,-11" />
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="10.52443359375,1,118.9511328125,12.1953125"
+              BoundingBox="-59.47556640625,20.15234375,118.9511328125,12.1953125"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Productos\Insert de Producto">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar Productos\Lectura de Productos">
     <Properties>
@@ -1003,14 +999,6 @@ FROM            item</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\Cargar Productos\Lectura de DimProductos">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\Cargar Productos\Insert de Producto">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
