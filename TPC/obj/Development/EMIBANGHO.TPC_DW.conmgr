@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="EMIBANGHO.TPC_DW"
+  DTS:DTSID="{735FE6A6-763C-476A-AE36-B5F0C3563899}"
+  DTS:CreationName="ADO.NET:System.Data.SqlClient.SqlConnection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectionString="Data Source=EMIBANGHO;Initial Catalog=TPC_DW;Integrated Security=True;Application Name=SSIS-TPC-{735FE6A6-763C-476A-AE36-B5F0C3563899}EMIBANGHO.TPC_DW;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
