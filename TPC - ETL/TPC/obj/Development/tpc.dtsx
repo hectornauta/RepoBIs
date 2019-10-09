@@ -1,4 +1,4 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="9/30/2019 3:06:13 AM"
@@ -9,10 +9,10 @@
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="15.0.1301.433"
   DTS:LocaleID="11274"
-  DTS:ObjectName="TPC"
+  DTS:ObjectName="TPC - ETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="181"
-  DTS:VersionGUID="{BA156AA3-E7F8-4C18-89EF-94F14FDF2EDA}">
+  DTS:VersionBuild="184"
+  DTS:VersionGUID="{52AD0DEC-CFBF-46A2-869B-3EA26808B8B1}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -45,7 +45,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Fecha_Final">
       <DTS:VariableValue
-        DTS:DataType="7">12/31/2016 2:14:00 AM</DTS:VariableValue>
+        DTS:DataType="7">12/31/2015 2:14:00 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -54,7 +54,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Fecha_Inicial">
       <DTS:VariableValue
-        DTS:DataType="7">1/1/2016 2:14:00 AM</DTS:VariableValue>
+        DTS:DataType="7">1/1/2015 2:14:00 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -9037,9 +9037,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9067,9 +9065,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9103,9 +9099,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9139,9 +9133,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9211,9 +9203,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9247,9 +9237,7 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9517,7 +9505,7 @@ FROM            orders</property>
         <NodeLayout
           Size="151,42"
           Id="Package\Cargar Ventas\Insertar Ventas"
-          TopLeft="256,1025.5" />
+          TopLeft="256,1011.5" />
         <NodeLayout
           Size="156,42"
           Id="Package\Cargar Ventas\Data Conversion"
@@ -9848,14 +9836,14 @@ FROM            orders</property>
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,60"
+              EndConnector="0,46"
               Start="0,0"
-              End="0,52.5">
+              End="0,38.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,52.5" />
+                    End="0,38.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

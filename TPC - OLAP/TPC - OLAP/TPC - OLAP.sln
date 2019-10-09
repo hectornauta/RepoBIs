@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "TPC - OLAP", "TPC - OLAP\TPC - OLAP.dwproj", "{D421B613-7E49-44D7-9CA6-456377A7E8B0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.ActiveCfg = Development
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.Build.0 = Development
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {81894574-01E5-4770-8911-520983C12A79}
+	EndGlobalSection
+EndGlobal
