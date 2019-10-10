@@ -11,8 +11,8 @@
   DTS:LocaleID="11274"
   DTS:ObjectName="TPC - ETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="184"
-  DTS:VersionGUID="{52AD0DEC-CFBF-46A2-869B-3EA26808B8B1}">
+  DTS:VersionBuild="204"
+  DTS:VersionGUID="{5F9DB0DE-14AD-4894-8CBF-C9CAD74C60FC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -45,7 +45,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Fecha_Final">
       <DTS:VariableValue
-        DTS:DataType="7">12/31/2015 2:14:00 AM</DTS:VariableValue>
+        DTS:DataType="7">12/31/2019 2:14:00 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -54,7 +54,7 @@
       DTS:Namespace="User"
       DTS:ObjectName="Fecha_Inicial">
       <DTS:VariableValue
-        DTS:DataType="7">1/1/2015 2:14:00 AM</DTS:VariableValue>
+        DTS:DataType="7">1/1/2019 2:14:00 AM</DTS:VariableValue>
     </DTS:Variable>
     <DTS:Variable
       DTS:CreationName=""
@@ -76,7 +76,7 @@
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Carga de Fechas"
-      DTS:ThreadHint="1">
+      DTS:ThreadHint="0">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -4805,7 +4805,7 @@ FROM            order_line</property>
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Cargar Fechas SP"
-      DTS:ThreadHint="0">
+      DTS:ThreadHint="1">
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
@@ -5621,38 +5621,38 @@ FROM            item</property>
                       cachedName="ol_amount"
                       cachedPrecision="20"
                       cachedScale="10"
-                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_amount]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_amount]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[ol_quantity]"
                       cachedDataType="i2"
                       cachedName="ol_quantity"
-                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_quantity]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_quantity]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[o_w_id]"
                       cachedDataType="i4"
                       cachedName="o_w_id"
-                      cachedSortKeyPosition="1"
-                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_w_id]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_w_id]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[PK_Distrito]"
                       cachedDataType="i4"
                       cachedName="PK_Distrito"
-                      lineageId="Package\Cargar Ventas\Buscar Distrito.Outputs[Lookup Match Output].Columns[PK_Distrito]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Distrito]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[PK_Cliente]"
                       cachedDataType="i4"
                       cachedName="PK_Cliente"
-                      lineageId="Package\Cargar Ventas\Buscar Cliente.Outputs[Lookup Match Output].Columns[PK_Cliente]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Cliente]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[PK_Tiempo]"
                       cachedDataType="i4"
                       cachedName="PK_Tiempo"
-                      lineageId="Package\Cargar Ventas\Buscar Fecha.Outputs[Lookup Match Output].Columns[PK_Tiempo]" />
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Tiempo]" />
                     <inputColumn
                       refId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1].Columns[ol_i_id]"
                       cachedDataType="i4"
                       cachedName="ol_i_id"
-                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_i_id]" />
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_i_id]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -5685,7 +5685,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_amount]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_amount]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5711,7 +5711,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_quantity]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_quantity]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5737,7 +5737,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_w_id]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_w_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5763,7 +5763,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Buscar Distrito.Outputs[Lookup Match Output].Columns[PK_Distrito]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Distrito]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5789,7 +5789,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Buscar Cliente.Outputs[Lookup Match Output].Columns[PK_Cliente]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Cliente]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5815,7 +5815,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Buscar Fecha.Outputs[Lookup Match Output].Columns[PK_Tiempo]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Tiempo]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -5841,7 +5841,7 @@ FROM            item</property>
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the ID of the input column used in the aggregation."
-                          name="AggregationColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_i_id]}</property>
+                          name="AggregationColumnId">#{Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_i_id]}</property>
                         <property
                           dataType="System.Int32"
                           description="Specifies the type of aggregation."
@@ -7295,6 +7295,103 @@ FROM            order_line</property>
               </outputs>
             </component>
             <component
+              refId="Package\Cargar Ventas\Leer Productos"
+              componentClassID="Microsoft.ManagedComponentHost"
+              contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server."
+              name="Leer Productos"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Especifica la instrucción SQL utilizada por el componente para extraer datos."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        PK_Producto
+FROM            D_Producto</property>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">30</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si se debe permitir que columnas externas que no sean de cadenas se conviertan implícitamente en cadenas en las columnas de salida."
+                  name="AllowImplicitStringConversion">true</property>
+                <property
+                  dataType="System.String"
+                  description="Nombre de la tabla de la base de datos de origen."
+                  expressionType="Notify"
+                  name="TableOrViewName"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especificar el modo de recuperar información de columnas externas"
+                  name="AccessMode"
+                  typeConverter="Microsoft.SqlServer.Dts.Pipeline.DataReaderSourceAdapter+EnumToStringConverter">2</property>
+                <property
+                  dataType="System.String"
+                  name="UserComponentTypeName">Microsoft.DataReaderSourceAdapter</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Cargar Ventas\Leer Productos.Connections[IDbConnection]"
+                  connectionManagerID="{735FE6A6-763C-476A-AE36-B5F0C3563899}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[EMIBANGHO.TPC_DW]"
+                  description="Administrador de conexiones administrado"
+                  name="IDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET]"
+                  name="Salida de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].Columns[PK_Producto]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[PK_Producto]"
+                      lineageId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].Columns[PK_Producto]"
+                      name="PK_Producto"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].ExternalColumns[PK_Producto]"
+                      dataType="i4"
+                      name="PK_Producto" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de ADO NET">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[PK_Producto]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[PK_Producto]"
+                      name="PK_Producto" />
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\Cargar Ventas\Leer Ventas"
               componentClassID="Microsoft.ManagedComponentHost"
               contactInfo="Consume datos de SQL Server, OLE DB, ODBC u Oracle mediante el correspondiente proveedor de datos de .NET Framework. Se usa una instrucción Transact-SQL para definir el conjunto de resultados. Por ejemplo, se extraen datos de SQL Server con el proveedor de datos de .NET Framework para SQL Server.;Microsoft Corporation; Microsoft SQL Server; © Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
@@ -7458,6 +7555,338 @@ FROM            orders</property>
                       lineageId="Package\Cargar Ventas\Leer Ventas.Outputs[Salida de error de origen de ADO NET].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Ventas\Merge Join"
+              componentClassID="Microsoft.MergeJoin"
+              contactInfo="Merge Join;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combine two sorted data flows into one using the FULL, LEFT, or INNER join. We recommend this transformation when data flows can be sorted at their sources."
+              name="Merge Join"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of join to perform."
+                  name="JoinType"
+                  typeConverter="JoinType">2</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the number of columns in the ordering key."
+                  name="NumKeyColumns">1</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the null values are treated as equal values."
+                  name="TreatNullsAsEqual">true</property>
+                <property
+                  dataType="System.Int32"
+                  description="Indicates the requested maximum buffers per input before blocking."
+                  name="MaxBuffersPerInput">5</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Left Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_i_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_i_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_i_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_w_id]"
+                      cachedDataType="i4"
+                      cachedName="o_w_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_w_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_d_id]"
+                      cachedDataType="ui1"
+                      cachedName="o_d_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_d_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_id]"
+                      cachedDataType="i4"
+                      cachedName="o_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_c_id]"
+                      cachedDataType="i4"
+                      cachedName="o_c_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_c_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_amount]"
+                      cachedDataType="numeric"
+                      cachedName="ol_amount"
+                      cachedPrecision="20"
+                      cachedScale="10"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_amount]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_quantity]"
+                      cachedDataType="i2"
+                      cachedName="ol_quantity"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_quantity]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_w_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_w_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_w_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_d_id]"
+                      cachedDataType="ui1"
+                      cachedName="ol_d_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_d_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_o_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_o_id"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_o_id]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[Fecha_Nueva]"
+                      cachedDataType="dbDate"
+                      cachedName="Fecha_Nueva"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[Fecha_Nueva]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Distrito]"
+                      cachedDataType="i4"
+                      cachedName="PK_Distrito"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Distrito]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Cliente]"
+                      cachedDataType="i4"
+                      cachedName="PK_Cliente"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Cliente]" />
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Tiempo]"
+                      cachedDataType="i4"
+                      cachedName="PK_Tiempo"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Tiempo]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Right Input]"
+                  hasSideEffects="true"
+                  name="Merge Join Right Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Right Input].Columns[PK_Producto]"
+                      cachedDataType="i4"
+                      cachedName="PK_Producto"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Cargar Ventas\Ordenar productos.Outputs[Sort Output].Columns[PK_Producto]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output]"
+                  isSorted="true"
+                  name="Merge Join Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_w_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_w_id]"
+                      name="o_w_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_w_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_d_id]"
+                      dataType="ui1"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_d_id]"
+                      name="o_d_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_d_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_id]"
+                      name="o_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_c_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[o_c_id]"
+                      name="o_c_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[o_c_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_i_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_i_id]"
+                      name="ol_i_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_i_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_amount]"
+                      name="ol_amount"
+                      precision="20"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_amount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_quantity]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_quantity]"
+                      name="ol_quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_w_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_w_id]"
+                      name="ol_w_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_w_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_d_id]"
+                      dataType="ui1"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_d_id]"
+                      name="ol_d_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_d_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_o_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[ol_o_id]"
+                      name="ol_o_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[ol_o_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[Fecha_Nueva]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[Fecha_Nueva]"
+                      name="Fecha_Nueva">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[Fecha_Nueva]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Distrito]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Distrito]"
+                      name="PK_Distrito">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Distrito]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Cliente]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Cliente]"
+                      name="PK_Cliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Cliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Tiempo]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Tiempo]"
+                      name="PK_Tiempo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input].Columns[PK_Tiempo]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Producto]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output].Columns[PK_Producto]"
+                      name="PK_Producto">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\Cargar Ventas\Merge Join.Inputs[Merge Join Right Input].Columns[PK_Producto]}</property>
+                      </properties>
+                    </outputColumn>
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -7675,6 +8104,526 @@ FROM            orders</property>
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
                           name="SortColumnId">#{Package\Cargar Ventas\Leer líneas.Outputs[Salida de origen de ADO NET].Columns[ol_quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Ventas\Ordenar Líneas"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordenar Líneas"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[o_w_id]"
+                      cachedDataType="i4"
+                      cachedName="o_w_id"
+                      cachedSortKeyPosition="1"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_w_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[o_d_id]"
+                      cachedDataType="ui1"
+                      cachedName="o_d_id"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_d_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[o_id]"
+                      cachedDataType="i4"
+                      cachedName="o_id"
+                      cachedSortKeyPosition="3"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[o_c_id]"
+                      cachedDataType="i4"
+                      cachedName="o_c_id"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_c_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_i_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_i_id"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_i_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_amount]"
+                      cachedDataType="numeric"
+                      cachedName="ol_amount"
+                      cachedPrecision="20"
+                      cachedScale="10"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_amount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_quantity]"
+                      cachedDataType="i2"
+                      cachedName="ol_quantity"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_quantity]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_w_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_w_id"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_w_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_d_id]"
+                      cachedDataType="ui1"
+                      cachedName="ol_d_id"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_d_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[ol_o_id]"
+                      cachedDataType="i4"
+                      cachedName="ol_o_id"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_o_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[Fecha_Nueva]"
+                      cachedDataType="dbDate"
+                      cachedName="Fecha_Nueva"
+                      lineageId="Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[Fecha_Nueva]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[PK_Distrito]"
+                      cachedDataType="i4"
+                      cachedName="PK_Distrito"
+                      lineageId="Package\Cargar Ventas\Buscar Distrito.Outputs[Lookup Match Output].Columns[PK_Distrito]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[PK_Cliente]"
+                      cachedDataType="i4"
+                      cachedName="PK_Cliente"
+                      lineageId="Package\Cargar Ventas\Buscar Cliente.Outputs[Lookup Match Output].Columns[PK_Cliente]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input].Columns[PK_Tiempo]"
+                      cachedDataType="i4"
+                      cachedName="PK_Tiempo"
+                      lineageId="Package\Cargar Ventas\Buscar Fecha.Outputs[Lookup Match Output].Columns[PK_Tiempo]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_w_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_w_id]"
+                      name="o_w_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_w_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_d_id]"
+                      dataType="ui1"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_d_id]"
+                      name="o_d_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_d_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_id]"
+                      name="o_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_c_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[o_c_id]"
+                      name="o_c_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[o_c_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_i_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_i_id]"
+                      name="ol_i_id"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_i_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_amount]"
+                      dataType="numeric"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_amount]"
+                      name="ol_amount"
+                      precision="20"
+                      scale="10">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_amount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_quantity]"
+                      dataType="i2"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_quantity]"
+                      name="ol_quantity">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_quantity]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_w_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_w_id]"
+                      name="ol_w_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_w_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_d_id]"
+                      dataType="ui1"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_d_id]"
+                      name="ol_d_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_d_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_o_id]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[ol_o_id]"
+                      name="ol_o_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[ol_o_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[Fecha_Nueva]"
+                      dataType="dbDate"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[Fecha_Nueva]"
+                      name="Fecha_Nueva">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Join.Outputs[Merge Join Output].Columns[Fecha_Nueva]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Distrito]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Distrito]"
+                      name="PK_Distrito">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Buscar Distrito.Outputs[Lookup Match Output].Columns[PK_Distrito]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Cliente]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Cliente]"
+                      name="PK_Cliente">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Buscar Cliente.Outputs[Lookup Match Output].Columns[PK_Cliente]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Tiempo]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output].Columns[PK_Tiempo]"
+                      name="PK_Tiempo">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Buscar Fecha.Outputs[Lookup Match Output].Columns[PK_Tiempo]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Cargar Ventas\Ordenar productos"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Ordenar productos"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\Cargar Ventas\Ordenar productos.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Cargar Ventas\Ordenar productos.Inputs[Sort Input].Columns[PK_Producto]"
+                      cachedDataType="i4"
+                      cachedName="PK_Producto"
+                      lineageId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].Columns[PK_Producto]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Cargar Ventas\Ordenar productos.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Cargar Ventas\Ordenar productos.Outputs[Sort Output].Columns[PK_Producto]"
+                      dataType="i4"
+                      lineageId="Package\Cargar Ventas\Ordenar productos.Outputs[Sort Output].Columns[PK_Producto]"
+                      name="PK_Producto"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET].Columns[PK_Producto]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7921,7 +8870,7 @@ FROM            orders</property>
               startId="Package\Cargar Ventas\Buscar Cliente.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Cargar Ventas.Paths[Lookup Match Output2]"
-              endId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1]"
+              endId="Package\Cargar Ventas\Ordenar Líneas.Inputs[Sort Input]"
               name="Lookup Match Output"
               startId="Package\Cargar Ventas\Buscar Fecha.Outputs[Lookup Match Output]" />
             <path
@@ -7929,6 +8878,11 @@ FROM            orders</property>
               endId="Package\Cargar Ventas\Filtrar líneas.Inputs[Conditional Split Input]"
               name="Merge Join Output"
               startId="Package\Cargar Ventas\Join.Outputs[Merge Join Output]" />
+            <path
+              refId="Package\Cargar Ventas.Paths[Merge Join Output1]"
+              endId="Package\Cargar Ventas\Agrupar.Inputs[Aggregate Input 1]"
+              name="Merge Join Output"
+              startId="Package\Cargar Ventas\Merge Join.Outputs[Merge Join Output]" />
             <path
               refId="Package\Cargar Ventas.Paths[Nuevas líneas]"
               endId="Package\Cargar Ventas\Buscar Distrito.Inputs[Lookup Input]"
@@ -7945,6 +8899,11 @@ FROM            orders</property>
               name="Salida de origen de ADO NET"
               startId="Package\Cargar Ventas\Leer líneas.Outputs[Salida de origen de ADO NET]" />
             <path
+              refId="Package\Cargar Ventas.Paths[Salida de origen de ADO NET2]"
+              endId="Package\Cargar Ventas\Ordenar productos.Inputs[Sort Input]"
+              name="Salida de origen de ADO NET"
+              startId="Package\Cargar Ventas\Leer Productos.Outputs[Salida de origen de ADO NET]" />
+            <path
               refId="Package\Cargar Ventas.Paths[Sort Output]"
               endId="Package\Cargar Ventas\Join.Inputs[Merge Join Left Input]"
               name="Sort Output"
@@ -7954,6 +8913,16 @@ FROM            orders</property>
               endId="Package\Cargar Ventas\Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Cargar Ventas\Ordenar líneas.Outputs[Sort Output]" />
+            <path
+              refId="Package\Cargar Ventas.Paths[Sort Output2]"
+              endId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Cargar Ventas\Ordenar Líneas.Outputs[Sort Output]" />
+            <path
+              refId="Package\Cargar Ventas.Paths[Sort Output3]"
+              endId="Package\Cargar Ventas\Merge Join.Inputs[Merge Join Right Input]"
+              name="Sort Output"
+              startId="Package\Cargar Ventas\Ordenar productos.Outputs[Sort Output]" />
             <path
               refId="Package\Cargar Ventas.Paths[Ventas no cargadas]"
               endId="Package\Cargar Ventas\Ordenar ventas filtradas.Inputs[Sort Input]"
@@ -9037,7 +10006,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9065,7 +10036,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9099,7 +10072,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9133,7 +10108,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9203,7 +10180,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9237,7 +10216,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -9331,7 +10312,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9365,7 +10348,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9387,7 +10372,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9421,7 +10408,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9443,7 +10432,9 @@ FROM            orders</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -9501,11 +10492,11 @@ FROM            orders</property>
     design-time-name="Package\Cargar Ventas">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="151,42"
           Id="Package\Cargar Ventas\Insertar Ventas"
-          TopLeft="256,1011.5" />
+          TopLeft="462,1118.5" />
         <NodeLayout
           Size="156,42"
           Id="Package\Cargar Ventas\Data Conversion"
@@ -9549,7 +10540,7 @@ FROM            orders</property>
         <NodeLayout
           Size="116,42"
           Id="Package\Cargar Ventas\Agrupar"
-          TopLeft="273.5,923.5" />
+          TopLeft="291.5,1117.5" />
         <NodeLayout
           Size="164,42"
           Id="Package\Cargar Ventas\Filtrado de Ventas"
@@ -9737,30 +10728,6 @@ FROM            orders</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Cargar Ventas.Paths[Lookup Match Output2]"
-          TopLeft="331.5,863.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
           Id="Package\Cargar Ventas.Paths[Lookup Match Output1]"
           TopLeft="331.5,761.5">
           <EdgeLayout.Curve>
@@ -9832,18 +10799,206 @@ FROM            orders</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\Cargar Ventas.Paths[Aggregate Output 1]"
-          TopLeft="331.5,965.5">
+          TopLeft="407.5,1139">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46"
+              EndConnector="54.5,0"
               Start="0,0"
-              End="0,38.5">
+              End="47,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,38.5" />
+                    End="47,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="149,42"
+          Id="Package\Cargar Ventas\Leer Productos"
+          TopLeft="513,792" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Cargar Ventas\Ordenar productos"
+          TopLeft="541,876" />
+        <EdgeLayout
+          Id="Package\Cargar Ventas.Paths[Salida de origen de ADO NET2]"
+          TopLeft="587.5,834">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37,42"
+              Start="0,0"
+              End="37,34.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,17" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,17"
+                    Point2="0,21"
+                    Point3="4,21" />
+                  <mssgle:LineSegment
+                    End="33,21" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33,21"
+                    Point2="37,21"
+                    Point3="37,25" />
+                  <mssgle:LineSegment
+                    End="37,34.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="150,42"
+          Id="Package\Cargar Ventas\Ordenar Líneas"
+          TopLeft="280,931" />
+        <EdgeLayout
+          Id="Package\Cargar Ventas.Paths[Lookup Match Output2]"
+          TopLeft="331.5,863.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="23.5,67.5"
+              Start="0,0"
+              End="23.5,60">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29.75"
+                    Point2="0,33.75"
+                    Point3="4,33.75" />
+                  <mssgle:LineSegment
+                    End="19.5,33.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="19.5,33.75"
+                    Point2="23.5,33.75"
+                    Point3="23.5,37.75" />
+                  <mssgle:LineSegment
+                    End="23.5,60" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-36.44138671875,38.75,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="130,42"
+          Id="Package\Cargar Ventas\Merge Join"
+          TopLeft="520,984" />
+        <EdgeLayout
+          Id="Package\Cargar Ventas.Paths[Sort Output2]"
+          TopLeft="430,952">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="90,53"
+              Start="0,0"
+              End="82.5,53">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="41,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,0"
+                    Point2="45,0"
+                    Point3="45,4" />
+                  <mssgle:LineSegment
+                    End="45,49" />
+                  <mssgle:CubicBezierSegment
+                    Point1="45,49"
+                    Point2="45,53"
+                    Point3="49,53" />
+                  <mssgle:LineSegment
+                    End="82.5,53" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Ventas.Paths[Sort Output3]"
+          TopLeft="624.5,918">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-39.5,66"
+              Start="0,0"
+              End="-39.5,58.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,29" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,29"
+                    Point2="0,33"
+                    Point3="-4,33" />
+                  <mssgle:LineSegment
+                    End="-35.5,33" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-35.5,33"
+                    Point2="-39.5,33"
+                    Point3="-39.5,37" />
+                  <mssgle:LineSegment
+                    End="-39.5,58.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Cargar Ventas.Paths[Merge Join Output1]"
+          TopLeft="585,1026">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-235.5,91.5"
+              Start="0,0"
+              End="-235.5,84">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,41.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,41.75"
+                    Point2="0,45.75"
+                    Point3="-4,45.75" />
+                  <mssgle:LineSegment
+                    End="-231.5,45.75" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-231.5,45.75"
+                    Point2="-235.5,45.75"
+                    Point3="-235.5,49.75" />
+                  <mssgle:LineSegment
+                    End="-235.5,84" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9943,6 +11098,14 @@ FROM            orders</property>
         <Value
           type="q4:string">0</Value>
       </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Cargar Ventas\Leer Productos">
+    <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
       </Property>

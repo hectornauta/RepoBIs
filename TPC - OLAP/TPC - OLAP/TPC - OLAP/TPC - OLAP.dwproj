@@ -6,10 +6,71 @@
     <Name>TPC - OLAP.database</Name>
     <FullPath>TPC - OLAP.database</FullPath>
   </Database>
+  <Cubes>
+    <ProjectItem>
+      <Name>TPC DW.cube</Name>
+      <FullPath>TPC DW.cube</FullPath>
+      <Dependencies>
+        <ProjectItem>
+          <Name>TPC DW.partitions</Name>
+          <FullPath>TPC DW.partitions</FullPath>
+        </ProjectItem>
+      </Dependencies>
+    </ProjectItem>
+  </Cubes>
+  <Dimensions>
+    <ProjectItem>
+      <Name>Fechas.dim</Name>
+      <FullPath>Fechas.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Almacenes.dim</Name>
+      <FullPath>Almacenes.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Clientes.dim</Name>
+      <FullPath>Clientes.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Distritos.dim</Name>
+      <FullPath>Distritos.dim</FullPath>
+    </ProjectItem>
+    <ProjectItem>
+      <Name>Productos.dim</Name>
+      <FullPath>Productos.dim</FullPath>
+    </ProjectItem>
+  </Dimensions>
+  <DataSources>
+    <ProjectItem>
+      <Name>TPC DW.ds</Name>
+      <FullPath>TPC DW.ds</FullPath>
+    </ProjectItem>
+  </DataSources>
+  <DataSourceViews>
+    <ProjectItem>
+      <Name>TPC DW.dsv</Name>
+      <FullPath>TPC DW.dsv</FullPath>
+    </ProjectItem>
+  </DataSourceViews>
   <Configurations>
     <Configuration>
       <Name>Development</Name>
-      <Options />
+      <Options>
+        <ConnectionMappings>
+          <ConfigurationSetting>
+            <Id>TPC DW</Id>
+            <Name>TPC DW</Name>
+            <Value xsi:type="xsd:string">Provider=SQLNCLI11.1;Data Source=localhost;Integrated Security=SSPI;Initial Catalog=TPC_DW</Value>
+          </ConfigurationSetting>
+        </ConnectionMappings>
+        <ConnectionSecurityMappings>
+          <ConfigurationSetting>
+            <Id>TPC DW</Id>
+            <Name>TPC DW</Name>
+            <Value xsi:type="xsd:int">0</Value>
+          </ConfigurationSetting>
+        </ConnectionSecurityMappings>
+      </Options>
     </Configuration>
   </Configurations>
 </Project>
