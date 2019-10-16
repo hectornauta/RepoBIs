@@ -21,7 +21,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2213" scrolltop="-1079" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2213" scrolltop="-1529" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -32,9 +32,9 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fechas" left="-853" top="-265" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4111" height="6429" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fechas" left="-853" top="-265" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4667" height="8070" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
-                  <ddsxmlobjectstreaminitwrapper binary="000e00000f1000001d190000" />
+                  <ddsxmlobjectstreaminitwrapper binary="000e00003b120000861f0000" />
                 </control>
                 <layoutobject>
                   <ddsxmlobj>
@@ -64,7 +64,7 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>-1079</Value>
+          <Value>-1529</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
@@ -100,9 +100,9 @@
                   </Attributes>
                   <Position x="157" y="20" />
                 </Shape>
-                <Shape Id="Cuatrimestre" Expanded="true">
+                <Shape Id="Trimestre" Expanded="false">
                   <Attributes>
-                    <Attribute Id="Cuatrimestre" />
+                    <Attribute Id="Trimestre" />
                   </Attributes>
                   <Position x="295" y="20" />
                 </Shape>
@@ -168,6 +168,7 @@
             </AttributeRelationship>
             <AttributeRelationship>
               <AttributeID>Mes</AttributeID>
+              <RelationshipType>Rigid</RelationshipType>
               <Name>Mes</Name>
             </AttributeRelationship>
             <AttributeRelationship>
@@ -259,9 +260,9 @@
           </NameColumn>
           <AttributeRelationships>
             <AttributeRelationship>
-              <AttributeID>Cuatrimestre</AttributeID>
+              <AttributeID>Trimestre</AttributeID>
               <RelationshipType>Rigid</RelationshipType>
-              <Name>Cuatrimestre</Name>
+              <Name>Trimestre</Name>
             </AttributeRelationship>
           </AttributeRelationships>
           <OrderBy>Key</OrderBy>
@@ -374,9 +375,8 @@
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
         <Attribute>
-          <ID>Cuatrimestre</ID>
-          <Name>Cuatrimestre</Name>
-          <Type>TrimesterOfYear</Type>
+          <ID>Trimestre</ID>
+          <Name>Trimestre</Name>
           <KeyColumns>
             <KeyColumn>
               <DataType>UnsignedTinyInt</DataType>
@@ -385,20 +385,13 @@
                 <ColumnID>Cuatrimestre</ColumnID>
               </Source>
             </KeyColumn>
-            <KeyColumn>
-              <DataType>Integer</DataType>
-              <Source xsi:type="ColumnBinding">
-                <TableID>dbo_D_Tiempo</TableID>
-                <ColumnID>Ano</ColumnID>
-              </Source>
-            </KeyColumn>
           </KeyColumns>
           <NameColumn>
             <DataType>WChar</DataType>
-            <DataSize>9</DataSize>
+            <DataSize>7</DataSize>
             <Source xsi:type="ColumnBinding">
               <TableID>dbo_D_Tiempo</TableID>
-              <ColumnID>CuatrimestreNombre</ColumnID>
+              <ColumnID>TrimestreNombre</ColumnID>
             </Source>
           </NameColumn>
           <AttributeRelationships>
@@ -428,9 +421,9 @@
               <SourceAttributeID>Semestre</SourceAttributeID>
             </Level>
             <Level>
-              <ID>Cuatrimestre</ID>
-              <Name>Cuatrimestre</Name>
-              <SourceAttributeID>Cuatrimestre</SourceAttributeID>
+              <ID>Trimestre</ID>
+              <Name>Trimestre</Name>
+              <SourceAttributeID>Trimestre</SourceAttributeID>
             </Level>
             <Level>
               <ID>Mes</ID>
@@ -452,7 +445,7 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2176" scrolltop="-4934" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="3" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2176" scrolltop="-4934" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="2408" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
                   <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                 </font>
@@ -463,9 +456,9 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Almacenes" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="3016" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Almacenes" left="20" top="0" logicalid="2" controlid="1" masterid="0" hint1="0" hint2="0" width="4392" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
-                  <ddsxmlobjectstreaminitwrapper binary="000e0000c80b0000f40d0000" />
+                  <ddsxmlobjectstreaminitwrapper binary="000e000028110000f40d0000" />
                 </control>
                 <layoutobject>
                   <ddsxmlobj>
@@ -514,14 +507,24 @@
           <Value>
             <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
               <Shapes NodeWidth="121">
-                <Shape Id="PK Almacen" Expanded="true">
+                <Shape Id="Número De Almacén" Expanded="true">
                   <Attributes>
-                    <Attribute Id="PK Almacen" />
-                    <Attribute Id="Ciudad" />
+                    <Attribute Id="Número De Almacén" />
                     <Attribute Id="Nombre" />
-                    <Attribute Id="Provincia" />
                   </Attributes>
                   <Position x="20" y="20" />
+                </Shape>
+                <Shape Id="Provincia" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Provincia" />
+                  </Attributes>
+                  <Position x="176" y="20" />
+                </Shape>
+                <Shape Id="Ciudad" Expanded="false">
+                  <Attributes>
+                    <Attribute Id="Ciudad" />
+                  </Attributes>
+                  <Position x="176" y="68" />
                 </Shape>
               </Shapes>
             </DiagramLayout>
@@ -541,44 +544,6 @@
       </ErrorConfiguration>
       <CurrentStorageMode>Molap</CurrentStorageMode>
       <Attributes>
-        <Attribute>
-          <ID>PK Almacen</ID>
-          <Name>PK Almacen</Name>
-          <Usage>Key</Usage>
-          <KeyColumns>
-            <KeyColumn>
-              <DataType>Integer</DataType>
-              <Source xsi:type="ColumnBinding">
-                <TableID>dbo_D_Almacen</TableID>
-                <ColumnID>PK_Almacen</ColumnID>
-              </Source>
-            </KeyColumn>
-          </KeyColumns>
-          <NameColumn>
-            <DataType>WChar</DataType>
-            <Source xsi:type="ColumnBinding">
-              <TableID>dbo_D_Almacen</TableID>
-              <ColumnID>PK_Almacen</ColumnID>
-            </Source>
-          </NameColumn>
-          <AttributeRelationships>
-            <AttributeRelationship>
-              <AttributeID>Nombre</AttributeID>
-              <Name>Nombre</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Ciudad</AttributeID>
-              <Name>Ciudad</Name>
-            </AttributeRelationship>
-            <AttributeRelationship>
-              <AttributeID>Provincia</AttributeID>
-              <Name>Provincia</Name>
-            </AttributeRelationship>
-          </AttributeRelationships>
-          <OrderBy>Key</OrderBy>
-          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
-          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
-        </Attribute>
         <Attribute>
           <ID>Nombre</ID>
           <Name>Nombre</Name>
@@ -629,6 +594,36 @@
             </KeyColumn>
           </KeyColumns>
           <OrderBy>Key</OrderBy>
+          <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+          <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+        </Attribute>
+        <Attribute>
+          <ID>Número De Almacén</ID>
+          <Name>Número De Almacén</Name>
+          <Usage>Key</Usage>
+          <KeyColumns>
+            <KeyColumn>
+              <DataType>Integer</DataType>
+              <Source xsi:type="ColumnBinding">
+                <TableID>dbo_D_Almacen</TableID>
+                <ColumnID>PK_Almacen</ColumnID>
+              </Source>
+            </KeyColumn>
+          </KeyColumns>
+          <AttributeRelationships>
+            <AttributeRelationship>
+              <AttributeID>Nombre</AttributeID>
+              <Name>Nombre</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Ciudad</AttributeID>
+              <Name>Ciudad</Name>
+            </AttributeRelationship>
+            <AttributeRelationship>
+              <AttributeID>Provincia</AttributeID>
+              <Name>Provincia</Name>
+            </AttributeRelationship>
+          </AttributeRelationships>
           <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
           <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
         </Attribute>
@@ -729,8 +724,10 @@
                   <Attributes>
                     <Attribute Id="PK Cliente" />
                     <Attribute Id="Apellido" />
+                    <Attribute Id="Ciudad" />
                     <Attribute Id="Fecha Alta" />
                     <Attribute Id="Nombre" />
+                    <Attribute Id="Provincia" />
                   </Attributes>
                   <Position x="20" y="20" />
                 </Shape>
@@ -751,18 +748,6 @@
                     <Attribute Id="PK Cliente Anterior" />
                   </Attributes>
                   <Position x="200" y="116" />
-                </Shape>
-                <Shape Id="Ciudad" Expanded="false">
-                  <Attributes>
-                    <Attribute Id="Ciudad" />
-                  </Attributes>
-                  <Position x="200" y="164" />
-                </Shape>
-                <Shape Id="Provincia" Expanded="false">
-                  <Attributes>
-                    <Attribute Id="Provincia" />
-                  </Attributes>
-                  <Position x="200" y="212" />
                 </Shape>
               </Shapes>
             </DiagramLayout>
@@ -1272,6 +1257,32 @@
       <Annotations>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+          <Value>
+            <dds xmlns="">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2184" scrolltop="-5781" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="7408" y="13441" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <font>
+                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                </font>
+                <mouseicon>
+                  <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+                </mouseicon>
+              </diagram>
+              <layoutmanager>
+                <ddsxmlobj />
+              </layoutmanager>
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Productos" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+                <control>
+                  <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
+                </control>
+                <layoutobject>
+                  <ddsxmlobj>
+                    <property name="LogicalObject" value="dbo_D_Producto" vartype="8" />
+                  </ddsxmlobj>
+                </layoutobject>
+                <shape groupshapeid="0" groupnode="0" />
+              </ddscontrol>
+            </dds>
+          </Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
@@ -1287,15 +1298,15 @@
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
-          <Value>0</Value>
+          <Value>-2184</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
-          <Value>0</Value>
+          <Value>-5781</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
-          <Value>0</Value>
+          <Value>20</Value>
         </Annotation>
         <Annotation>
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
@@ -1373,9 +1384,9 @@
           <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
           <Value>
             <dds xmlns="">
-              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="12" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5498" scrolltop="3621" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="19606" y="8202" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+              <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-5498" scrolltop="3621" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="19606" y="2408" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                 <font>
-                  <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
+                  <ddsxmlobjectstreamwrapper binary="01010000900180380100065461686f6d61" />
                 </font>
                 <mouseicon>
                   <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
@@ -1384,7 +1395,7 @@
               <layoutmanager>
                 <ddsxmlobj />
               </layoutmanager>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Clientes" left="3072" top="12579" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Clientes" left="3072" top="12579" logicalid="12" controlid="1" masterid="0" hint1="0" hint2="0" width="3704" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000780e000088130000" />
                 </control>
@@ -1395,7 +1406,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Distritos" left="20" top="5760" logicalid="2" controlid="2" masterid="0" hint1="0" hint2="0" width="3704" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Distritos" left="20" top="5760" logicalid="13" controlid="2" masterid="0" hint1="0" hint2="0" width="3704" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000780e000043110000" />
                 </control>
@@ -1406,7 +1417,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="6124" top="0" logicalid="3" controlid="3" masterid="0" hint1="0" hint2="0" width="3016" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" left="6124" top="0" logicalid="14" controlid="3" masterid="0" hint1="0" hint2="0" width="3016" height="3572" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000c80b0000f40d0000" />
                 </control>
@@ -1417,7 +1428,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fechas" left="9176" top="12579" logicalid="4" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Fechas" left="9176" top="12579" logicalid="15" controlid="4" masterid="0" hint1="0" hint2="0" width="3000" height="4419" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000043110000" />
                 </control>
@@ -1428,7 +1439,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Productos" left="11524" top="7030" logicalid="5" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Productos" left="11524" top="7030" logicalid="16" controlid="5" masterid="0" hint1="0" hint2="0" width="3000" height="1879" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b000057070000" />
                 </control>
@@ -1439,7 +1450,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Ventas" left="6124" top="5972" logicalid="6" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Ventas" left="6124" top="5972" logicalid="17" controlid="6" masterid="0" hint1="0" hint2="0" width="3000" height="3995" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobjectstreaminitwrapper binary="000e0000b80b00009b0f0000" />
                 </control>
@@ -1450,7 +1461,7 @@
                 </layoutobject>
                 <shape groupshapeid="0" groupnode="0" />
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="4525" top="9667" logicalid="7" controlid="7" masterid="0" hint1="0" hint2="0" width="2299" height="3412" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="4525" top="9667" logicalid="18" controlid="7" masterid="0" hint1="0" hint2="0" width="2299" height="3412" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1470,7 +1481,7 @@
                   <point x="6524" y="9967" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="3424" top="7570" logicalid="8" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="3424" top="7570" logicalid="19" controlid="8" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1488,7 +1499,7 @@
                   <point x="6124" y="7969" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="7233" top="3073" logicalid="9" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="7233" top="3073" logicalid="20" controlid="9" masterid="0" hint1="0" hint2="0" width="799" height="3199" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1508,7 +1519,7 @@
                   <point x="7624" y="5972" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="7874" top="9667" logicalid="10" controlid="10" masterid="0" hint1="0" hint2="0" width="3202" height="3412" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="7874" top="9667" logicalid="21" controlid="10" masterid="0" hint1="0" hint2="0" width="3202" height="3412" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1528,7 +1539,7 @@
                   <point x="8174" y="9967" />
                 </connector>
               </ddscontrol>
-              <ddscontrol controlprogid="MSDDS.Polyline" left="8824" top="7570" logicalid="11" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+              <ddscontrol controlprogid="MSDDS.Polyline" left="8824" top="7570" logicalid="22" controlid="11" masterid="0" hint1="0" hint2="0" width="3000" height="799" noresize="0" nomove="0" nodefaultattachpoints="1" autodrag="0" usedefaultiddshape="0" selectable="1" showselectionhandles="0" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
                 <control>
                   <ddsxmlobj>
                     <polyline endtypedst="6" endtypesrc="3" usercolor="15856113" linestyle="0" linerender="1" customendtypedstid="0" customendtypesrcid="0" adornsvisible="1" />
@@ -1646,9 +1657,6 @@
           <DimensionID>Almacenes</DimensionID>
           <Attributes>
             <Attribute>
-              <AttributeID>PK Almacen</AttributeID>
-            </Attribute>
-            <Attribute>
               <AttributeID>Nombre</AttributeID>
             </Attribute>
             <Attribute>
@@ -1656,6 +1664,9 @@
             </Attribute>
             <Attribute>
               <AttributeID>Provincia</AttributeID>
+            </Attribute>
+            <Attribute>
+              <AttributeID>Número De Almacén</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -1730,7 +1741,7 @@
               <AttributeID>Fecha Simple</AttributeID>
             </Attribute>
             <Attribute>
-              <AttributeID>Cuatrimestre</AttributeID>
+              <AttributeID>Trimestre</AttributeID>
             </Attribute>
           </Attributes>
           <Hierarchies>
@@ -1824,24 +1835,6 @@
               </Attributes>
             </Dimension>
             <Dimension xsi:type="RegularMeasureGroupDimension">
-              <CubeDimensionID>Almacenes</CubeDimensionID>
-              <Attributes>
-                <Attribute>
-                  <AttributeID>PK Almacen</AttributeID>
-                  <KeyColumns>
-                    <KeyColumn>
-                      <DataType>Integer</DataType>
-                      <Source xsi:type="ColumnBinding">
-                        <TableID>dbo_H_Ventas</TableID>
-                        <ColumnID>PK_Almacen</ColumnID>
-                      </Source>
-                    </KeyColumn>
-                  </KeyColumns>
-                  <Type>Granularity</Type>
-                </Attribute>
-              </Attributes>
-            </Dimension>
-            <Dimension xsi:type="RegularMeasureGroupDimension">
               <CubeDimensionID>Distritos</CubeDimensionID>
               <Attributes>
                 <Attribute>
@@ -1870,6 +1863,24 @@
                       <Source xsi:type="ColumnBinding">
                         <TableID>dbo_H_Ventas</TableID>
                         <ColumnID>PK_Tiempo</ColumnID>
+                      </Source>
+                    </KeyColumn>
+                  </KeyColumns>
+                  <Type>Granularity</Type>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension xsi:type="RegularMeasureGroupDimension">
+              <CubeDimensionID>Almacenes</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Número De Almacén</AttributeID>
+                  <KeyColumns>
+                    <KeyColumn>
+                      <DataType>Integer</DataType>
+                      <Source xsi:type="ColumnBinding">
+                        <TableID>dbo_H_Ventas</TableID>
+                        <ColumnID>PK_Almacen</ColumnID>
                       </Source>
                     </KeyColumn>
                   </KeyColumns>
@@ -1948,7 +1959,7 @@
                 <Name>_ALL_TABLES_</Name>
                 <DiagramLayout>
                   <dds>
-                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9064" scrolltop="-282" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20135" y="3731" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                    <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9064" scrolltop="-5000" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20135" y="14764" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                       <font>
                         <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                       </font>
@@ -2128,7 +2139,7 @@
                 <ShowRelationshipNames>False</ShowRelationshipNames>
                 <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
                 <DiagramViewPortLeft>-9064</DiagramViewPortLeft>
-                <DiagramViewPortTop>-282</DiagramViewPortTop>
+                <DiagramViewPortTop>-5000</DiagramViewPortTop>
                 <DiagramBoundingLeft>0</DiagramBoundingLeft>
                 <DiagramBoundingTop>0</DiagramBoundingTop>
                 <DiagramZoom>75</DiagramZoom>
@@ -2146,7 +2157,7 @@
                 <xs:element name="dbo_D_Almacen" msprop:design-time-name="6f16c9a7-76fe-4d48-b4a6-435a8911c462" msprop:FriendlyName="Almacenes" msprop:DbSchemaName="dbo" msprop:DbTableName="D_Almacen" msprop:TableType="Table">
                   <xs:complexType>
                     <xs:sequence>
-                      <xs:element name="PK_Almacen" msprop:design-time-name="27cf9879-a872-4aef-890f-aed84d23b3e0" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="PK_Almacen" type="xs:int" />
+                      <xs:element name="PK_Almacen" msprop:design-time-name="27cf9879-a872-4aef-890f-aed84d23b3e0" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="Número de Almacén" type="xs:int" />
                       <xs:element name="Nombre" msprop:design-time-name="43c8c158-1686-4d85-9515-e596e0fffcf9" msprop:DbColumnName="Nombre" msprop:FriendlyName="Nombre" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
@@ -2239,9 +2250,9 @@
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="PK_Cliente_Anterior" msprop:design-time-name="1d08f17a-ce7d-40fe-b9d5-13f55ec4cff1" msprop:DbColumnName="PK_Cliente_Anterior" msprop:FriendlyName="PK_Cliente_Anterior" type="xs:int" />
-                      <xs:element name="PK_Distrito_Anterior" msprop:design-time-name="0a255a7e-d79f-4e77-bb70-92ae3161ea82" msprop:DbColumnName="PK_Distrito_Anterior" msprop:FriendlyName="PK_Distrito_Anterior" type="xs:unsignedByte" />
-                      <xs:element name="PK_Almacen" msprop:design-time-name="fd10e85f-6b47-4752-a02c-3ba8b47c0153" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="PK_Almacen" type="xs:int" />
+                      <xs:element name="PK_Cliente_Anterior" msprop:design-time-name="1d08f17a-ce7d-40fe-b9d5-13f55ec4cff1" msprop:DbColumnName="PK_Cliente_Anterior" msprop:FriendlyName="Número de Cliente" type="xs:int" />
+                      <xs:element name="PK_Distrito_Anterior" msprop:design-time-name="0a255a7e-d79f-4e77-bb70-92ae3161ea82" msprop:DbColumnName="PK_Distrito_Anterior" msprop:FriendlyName="Número de Distrito" type="xs:unsignedByte" />
+                      <xs:element name="PK_Almacen" msprop:design-time-name="fd10e85f-6b47-4752-a02c-3ba8b47c0153" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="Número de Almacén" type="xs:int" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -2284,8 +2295,8 @@
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="PK_Distrito_Anterior" msprop:design-time-name="1ef4352b-3253-489d-9801-a5300844dfc9" msprop:DbColumnName="PK_Distrito_Anterior" msprop:FriendlyName="PK_Distrito_Anterior" type="xs:unsignedByte" />
-                      <xs:element name="PK_Almacen" msprop:design-time-name="19ba6b3a-8157-4ee3-a53c-7c88a6848acf" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="PK_Almacen" type="xs:int" />
+                      <xs:element name="PK_Distrito_Anterior" msprop:design-time-name="1ef4352b-3253-489d-9801-a5300844dfc9" msprop:DbColumnName="PK_Distrito_Anterior" msprop:FriendlyName="Número de Distrito" type="xs:unsignedByte" />
+                      <xs:element name="PK_Almacen" msprop:design-time-name="19ba6b3a-8157-4ee3-a53c-7c88a6848acf" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="Número de Almacén" type="xs:int" />
                     </xs:sequence>
                   </xs:complexType>
                 </xs:element>
@@ -2312,10 +2323,9 @@
                       <xs:element name="Mes" msprop:design-time-name="245fdfaf-a62d-40f6-a762-3ea7184df2ca" msprop:DbColumnName="Mes" msprop:FriendlyName="Mes" type="xs:unsignedByte" />
                       <xs:element name="Ano" msprop:design-time-name="2298bf77-1b6e-4497-8b51-d451251c1743" msprop:DbColumnName="Ano" msprop:FriendlyName="Año" type="xs:int" />
                       <xs:element name="Semana" msprop:design-time-name="4c4d0417-7e48-4f8d-a429-4419a175e3dd" msprop:DbColumnName="Semana" msprop:FriendlyName="Semana" type="xs:unsignedByte" />
-                      <xs:element name="Cuatrimestre" msprop:design-time-name="7ed6bacc-f059-4508-8914-8b0ea822c72f" msprop:DbColumnName="Cuatrimestre" msprop:FriendlyName="Cuatrimestre" type="xs:unsignedByte" />
+                      <xs:element name="Cuatrimestre" msprop:design-time-name="7ed6bacc-f059-4508-8914-8b0ea822c72f" msprop:DbColumnName="Cuatrimestre" msprop:FriendlyName="Trimestre" type="xs:unsignedByte" />
                       <xs:element name="dia_semana" msprop:design-time-name="eea75e8c-1673-4f40-a21e-2fe6a0455cac" msprop:DbColumnName="dia_semana" msprop:FriendlyName="dia_semana" type="xs:unsignedByte" />
                       <xs:element name="Semestre" msdata:ReadOnly="true" msprop:design-time-name="7558bea3-6448-4bff-8e27-9141ceb6d593" msprop:IsLogical="True" msprop:Description="Semestre" msprop:DbColumnName="Semestre" msprop:ComputedColumnExpression="CASE&#xD;&#xA;WHEN MES &lt;7 THEN 1&#xD;&#xA;ELSE 2&#xD;&#xA;END" type="xs:int" />
-                      <xs:element name="Trimestre" msdata:ReadOnly="true" msprop:design-time-name="c49e265e-e175-4f88-8669-8788da5e2808" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="Trimestre" msprop:ComputedColumnExpression="CASE&#xD;&#xA;WHEN Mes &lt; 4 THEN 1&#xD;&#xA;WHEN Mes &lt;7 THEN 2&#xD;&#xA;WHEN Mes &lt;10 THEN 3&#xD;&#xA;ELSE 4&#xD;&#xA;END" type="xs:int" />
                       <xs:element name="Fecha_Simple" msdata:ReadOnly="true" msprop:design-time-name="c7c01059-feda-4444-ae90-71c95d2dcedc" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="Fecha_Simple" msprop:ComputedColumnExpression="DATENAME(dd, Fecha) + ' ' +&#xD;&#xA;DATENAME(mm, Fecha) + ', ' +&#xD;&#xA;DATENAME(yy, Fecha)" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
@@ -2323,17 +2333,17 @@
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="CuatrimestreNombre" msdata:ReadOnly="true" msprop:design-time-name="8f804d78-5cca-4e54-8855-3340f099fc1d" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="CuatrimestreNombre" msprop:ComputedColumnExpression="'Trimestre' + &#xD;&#xA;CONVERT(CHAR (1), Cuatrimestre)" minOccurs="0">
+                      <xs:element name="TrimestreNombre" msdata:ReadOnly="true" msprop:design-time-name="8f804d78-5cca-4e54-8855-3340f099fc1d" msprop:IsLogical="True" msprop:FriendlyName="TrimestreNombre" msprop:Description="" msprop:DbColumnName="TrimestreNombre" msprop:ComputedColumnExpression="'Trim ' + &#xD;&#xA;CONVERT(CHAR (1), Cuatrimestre)" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
-                            <xs:maxLength value="10" />
+                            <xs:maxLength value="6" />
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
-                      <xs:element name="SemestreNombre" msdata:ReadOnly="true" msprop:design-time-name="29a867d8-50ef-4a7a-9e14-5aa13faf95c7" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="SemestreNombre" msprop:ComputedColumnExpression="CASE&#xD;&#xA;WHEN Mes&lt; 7 THEN 'S 1 ' + CONVERT(CHAR(4), Ano)&#xD;&#xA;ELSE&#xD;&#xA;'S 2 ' + CONVERT(CHAR(4), Ano)&#xD;&#xA;END" minOccurs="0">
+                      <xs:element name="SemestreNombre" msdata:ReadOnly="true" msprop:design-time-name="29a867d8-50ef-4a7a-9e14-5aa13faf95c7" msprop:IsLogical="True" msprop:Description="" msprop:DbColumnName="SemestreNombre" msprop:ComputedColumnExpression="CASE&#xD;&#xA;WHEN Mes&lt; 7 THEN 'Sem 1 ' + CONVERT(CHAR(4), Ano)&#xD;&#xA;ELSE&#xD;&#xA;'Sem 2 ' + CONVERT(CHAR(4), Ano)&#xD;&#xA;END" minOccurs="0">
                         <xs:simpleType>
                           <xs:restriction base="xs:string">
-                            <xs:maxLength value="8" />
+                            <xs:maxLength value="10" />
                           </xs:restriction>
                         </xs:simpleType>
                       </xs:element>
@@ -2401,25 +2411,25 @@
               <xs:field xpath="PK_Producto" />
               <xs:field xpath="PK_Tiempo" />
             </xs:unique>
-            <xs:keyref name="RefD_Cliente30" refer="Constraint2">
+            <xs:keyref name="RefD_Tiempo29" refer="dbo_D_Tiempo_Constraint1">
               <xs:selector xpath=".//dbo_H_Ventas" />
-              <xs:field xpath="PK_Cliente" />
-            </xs:keyref>
-            <xs:keyref name="RefD_Producto33" refer="dbo_D_Producto_Constraint1">
-              <xs:selector xpath=".//dbo_H_Ventas" />
-              <xs:field xpath="PK_Producto" />
-            </xs:keyref>
-            <xs:keyref name="RefD_Almacen32" refer="Constraint1">
-              <xs:selector xpath=".//dbo_H_Ventas" />
-              <xs:field xpath="PK_Almacen" />
+              <xs:field xpath="PK_Tiempo" />
             </xs:keyref>
             <xs:keyref name="RefD_Distrito31" refer="dbo_D_Distrito_Constraint2">
               <xs:selector xpath=".//dbo_H_Ventas" />
               <xs:field xpath="PK_Distrito" />
             </xs:keyref>
-            <xs:keyref name="RefD_Tiempo29" refer="dbo_D_Tiempo_Constraint1">
+            <xs:keyref name="RefD_Almacen32" refer="Constraint1">
               <xs:selector xpath=".//dbo_H_Ventas" />
-              <xs:field xpath="PK_Tiempo" />
+              <xs:field xpath="PK_Almacen" />
+            </xs:keyref>
+            <xs:keyref name="RefD_Producto33" refer="dbo_D_Producto_Constraint1">
+              <xs:selector xpath=".//dbo_H_Ventas" />
+              <xs:field xpath="PK_Producto" />
+            </xs:keyref>
+            <xs:keyref name="RefD_Cliente30" refer="Constraint2">
+              <xs:selector xpath=".//dbo_H_Ventas" />
+              <xs:field xpath="PK_Cliente" />
             </xs:keyref>
           </xs:element>
         </xs:schema>

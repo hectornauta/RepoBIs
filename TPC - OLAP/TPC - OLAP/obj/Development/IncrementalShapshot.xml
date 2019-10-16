@@ -26,21 +26,21 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.DataSourceView</Type>
-        <TimeStamp>SSTxAwAO+ZDoELB+6DD8zOXJe6o=16/10/2019 05:53:189/10/2019 19:47:18</TimeStamp>
+        <TimeStamp>6I9h13qrlaEXXZZLbeR0TblngWo=16/10/2019 14:56:279/10/2019 19:47:18</TimeStamp>
         <ID>
           <String>TPC DW</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>kFbodaqSNZREctbjmtptGJ+jpDI=16/10/2019 05:51:589/10/2019 19:56:56</TimeStamp>
+        <TimeStamp>H9dglJMgsrJp7Mui3P6rt1sT3Hc=16/10/2019 14:57:189/10/2019 19:56:56</TimeStamp>
         <ID>
           <String>Fechas</String>
         </ID>
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>B0fx5IJ5NCVAIPDtUw03o5Hpvqc=16/10/2019 05:34:419/10/2019 19:58:42</TimeStamp>
+        <TimeStamp>0XbmxmDMcSIaQGhfXYXA3xY5O14=16/10/2019 14:59:219/10/2019 19:58:42</TimeStamp>
         <ID>
           <String>Almacenes</String>
         </ID>
@@ -54,7 +54,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>KsQP13mPDvqSfDHnfeIlloRnDmM=16/10/2019 05:34:319/10/2019 20:03:46</TimeStamp>
+        <TimeStamp>sWUZvq7ff7ApXu6IZe7LXVGvjxA=16/10/2019 14:44:039/10/2019 20:03:46</TimeStamp>
         <ID>
           <String>Distritos</String>
         </ID>
@@ -68,7 +68,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>3sMXEHY+omQdpkUl9mZmpPRsSBo=16/10/2019 05:32:559/10/2019 20:06:49O1QFtlaDD4WTnV5ip5iJxhoxwEI=9/10/2019 20:06:499/10/2019 20:06:49</TimeStamp>
+        <TimeStamp>0P9nJkssc2fge4uF4O48SLDOJRU=16/10/2019 15:00:179/10/2019 20:06:49O1QFtlaDD4WTnV5ip5iJxhoxwEI=9/10/2019 20:06:499/10/2019 20:06:49</TimeStamp>
         <ID>
           <String>TPC DW</String>
         </ID>
@@ -85,5 +85,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-10-16T08:53:57.04Z</LastDeployed>
+  <LastDeployed>2019-10-16T18:00:56.42Z</LastDeployed>
 </DeploymentSnapshot>
