@@ -40,7 +40,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Dimension</Type>
-        <TimeStamp>0XbmxmDMcSIaQGhfXYXA3xY5O14=16/10/2019 14:59:219/10/2019 19:58:42</TimeStamp>
+        <TimeStamp>0XbmxmDMcSIaQGhfXYXA3xY5O14=16/10/2019 15:01:069/10/2019 19:58:42</TimeStamp>
         <ID>
           <String>Almacenes</String>
         </ID>
@@ -68,7 +68,7 @@
       </ObjectSnapshot>
       <ObjectSnapshot>
         <Type>Microsoft.AnalysisServices.Cube</Type>
-        <TimeStamp>0P9nJkssc2fge4uF4O48SLDOJRU=16/10/2019 15:00:179/10/2019 20:06:49O1QFtlaDD4WTnV5ip5iJxhoxwEI=9/10/2019 20:06:499/10/2019 20:06:49</TimeStamp>
+        <TimeStamp>0P9nJkssc2fge4uF4O48SLDOJRU=16/10/2019 15:45:459/10/2019 20:06:49O1QFtlaDD4WTnV5ip5iJxhoxwEI=9/10/2019 20:06:499/10/2019 20:06:49</TimeStamp>
         <ID>
           <String>TPC DW</String>
         </ID>
@@ -85,5 +85,5 @@
   </Snapshot>
   <AssemblyLocations />
   <ProcessingComplete>true</ProcessingComplete>
-  <LastDeployed>2019-10-16T18:00:56.42Z</LastDeployed>
+  <LastDeployed>2019-10-17T19:40:57.226667Z</LastDeployed>
 </DeploymentSnapshot>
