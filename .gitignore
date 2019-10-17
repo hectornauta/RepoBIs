@@ -18,3 +18,7 @@ TPC - OLAP/TPC - OLAP/bin/TPC - OLAP.configsettings
 TPC - OLAP/TPC - OLAP/TPC - OLAP.dwproj
 TPC - OLAP/TPC - OLAP/TPC - OLAP.dwproj.user
 TPC - OLAP/TPC - OLAP/TPC DW.ds
+
+TPC - ETL/.vs/TPC - ETL/v15/
+
+TPC - ETL/TPC/TPC.dtsx
