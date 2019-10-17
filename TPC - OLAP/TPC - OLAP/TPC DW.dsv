@@ -1,4 +1,4 @@
-﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="a17a9d1b-6323-432c-b013-9c2356df88ff" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+﻿<DataSourceView xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="e54b8852-a801-48ee-8456-5c6d646402f7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
   <ID>TPC DW</ID>
   <Name>TPC DW</Name>
   <CreatedTimestamp>0001-01-01T03:00:00Z</CreatedTimestamp>
@@ -27,7 +27,7 @@
             <Name>_ALL_TABLES_</Name>
             <DiagramLayout>
               <dds>
-                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9064" scrolltop="1984" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="20135" y="14764" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+                <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="24" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2843" scrolltop="1984" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="75" x="15372" y="14764" backcolor="2434342" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="1" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
                   <font>
                     <ddsxmlobjectstreamwrapper binary="01000000900144420100065461686f6d61" />
                   </font>
@@ -206,7 +206,7 @@
 </DiagramLayout>
             <ShowRelationshipNames>False</ShowRelationshipNames>
             <UseDiagramDefaultLayout>True</UseDiagramDefaultLayout>
-            <DiagramViewPortLeft>-9064</DiagramViewPortLeft>
+            <DiagramViewPortLeft>-2843</DiagramViewPortLeft>
             <DiagramViewPortTop>1984</DiagramViewPortTop>
             <DiagramBoundingLeft>0</DiagramBoundingLeft>
             <DiagramBoundingTop>0</DiagramBoundingTop>
@@ -321,6 +321,13 @@
                   <xs:element name="PK_Cliente_Anterior" msprop:design-time-name="1d08f17a-ce7d-40fe-b9d5-13f55ec4cff1" msprop:DbColumnName="PK_Cliente_Anterior" msprop:FriendlyName="Número de Cliente" type="xs:int" />
                   <xs:element name="PK_Distrito_Anterior" msprop:design-time-name="0a255a7e-d79f-4e77-bb70-92ae3161ea82" msprop:DbColumnName="PK_Distrito_Anterior" msprop:FriendlyName="Número de Distrito" type="xs:unsignedByte" />
                   <xs:element name="PK_Almacen" msprop:design-time-name="fd10e85f-6b47-4752-a02c-3ba8b47c0153" msprop:DbColumnName="PK_Almacen" msprop:FriendlyName="Número de Almacén" type="xs:int" />
+                  <xs:element name="Nombre_x0020_Completo" msdata:ReadOnly="true" msprop:Description="" msprop:ComputedColumnExpression="Apellido +  ', ' + Nombre" msprop:IsLogical="True" msprop:design-time-name="45f40f23-75de-442c-831a-150e6ee45233" msprop:DbColumnName="Nombre Completo" minOccurs="0">
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:maxLength value="102" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:element>
                 </xs:sequence>
               </xs:complexType>
             </xs:element>
@@ -479,25 +486,25 @@
           <xs:field xpath="PK_Producto" />
           <xs:field xpath="PK_Tiempo" />
         </xs:unique>
-        <xs:keyref name="RefD_Tiempo29" refer="dbo_D_Tiempo_Constraint1">
+        <xs:keyref name="RefD_Cliente30" refer="Constraint2">
           <xs:selector xpath=".//dbo_H_Ventas" />
-          <xs:field xpath="PK_Tiempo" />
-        </xs:keyref>
-        <xs:keyref name="RefD_Distrito31" refer="dbo_D_Distrito_Constraint2">
-          <xs:selector xpath=".//dbo_H_Ventas" />
-          <xs:field xpath="PK_Distrito" />
-        </xs:keyref>
-        <xs:keyref name="RefD_Almacen32" refer="Constraint1">
-          <xs:selector xpath=".//dbo_H_Ventas" />
-          <xs:field xpath="PK_Almacen" />
+          <xs:field xpath="PK_Cliente" />
         </xs:keyref>
         <xs:keyref name="RefD_Producto33" refer="dbo_D_Producto_Constraint1">
           <xs:selector xpath=".//dbo_H_Ventas" />
           <xs:field xpath="PK_Producto" />
         </xs:keyref>
-        <xs:keyref name="RefD_Cliente30" refer="Constraint2">
+        <xs:keyref name="RefD_Almacen32" refer="Constraint1">
           <xs:selector xpath=".//dbo_H_Ventas" />
-          <xs:field xpath="PK_Cliente" />
+          <xs:field xpath="PK_Almacen" />
+        </xs:keyref>
+        <xs:keyref name="RefD_Distrito31" refer="dbo_D_Distrito_Constraint2">
+          <xs:selector xpath=".//dbo_H_Ventas" />
+          <xs:field xpath="PK_Distrito" />
+        </xs:keyref>
+        <xs:keyref name="RefD_Tiempo29" refer="dbo_D_Tiempo_Constraint1">
+          <xs:selector xpath=".//dbo_H_Ventas" />
+          <xs:field xpath="PK_Tiempo" />
         </xs:keyref>
       </xs:element>
     </xs:schema>
