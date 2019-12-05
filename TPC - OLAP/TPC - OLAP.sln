@@ -8,11 +8,15 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Development|Default = Development|Default
+		testing|Default = testing|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.ActiveCfg = Development
 		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.Build.0 = Development
 		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.Development|Default.Deploy.0 = Development
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.testing|Default.ActiveCfg = testing
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.testing|Default.Build.0 = testing
+		{D421B613-7E49-44D7-9CA6-456377A7E8B0}.testing|Default.Deploy.0 = testing
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

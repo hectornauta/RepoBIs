@@ -2,13 +2,13 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>TPC - ETL</Name>
-    <LastWriteTime>2019-10-09T22:12:57.5957544Z</LastWriteTime>
+    <LastWriteTime>2019-10-16T22:49:03.7553649Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>TPC.dtsx</Name>
-      <LastWriteTime>2019-10-10T00:00:12.3416028Z</LastWriteTime>
+      <LastWriteTime>2019-12-04T23:55:53.5787845Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

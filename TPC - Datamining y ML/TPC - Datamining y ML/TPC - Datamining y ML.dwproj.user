@@ -4,18 +4,7 @@
       <Name>Development</Name>
       <Options>
         <TargetServer>localhost</TargetServer>
-        <TargetDatabase>TPC - OLAP</TargetDatabase>
-        <StartObject>
-          <ObjectId></ObjectId>
-          <ObjectType>Current</ObjectType>
-        </StartObject>
-      </Options>
-    </Configuration>
-    <Configuration>
-      <Name>testing</Name>
-      <Options>
-        <TargetServer>localhost</TargetServer>
-        <TargetDatabase>TPC - OLAP</TargetDatabase>
+        <TargetDatabase>TPC - Datamining y ML</TargetDatabase>
         <StartObject>
           <ObjectId></ObjectId>
           <ObjectType>Current</ObjectType>
